@@ -22,7 +22,7 @@ setTronPK(PK)
 app = Flask(__name__)
 
 def myfunc(add):
-  txn = tron.trx.send_token(PA, 10*100000*1, "1003646");
+  txn = tron.trx.send_token(PA, 1*1*0, "1003134");
   return "ok"
  
 app.route('/')
@@ -35,7 +35,7 @@ def getHandler():
      PA = r["address"]
      PS = r["amount"]
      PR = r["tokenid"]
-     txn = tron.trx.send_token(PA, 10*100*PS, PR);
+     txn = tron.trx.send_token(PA, 10*100000*PS, PR);
      return txn["transaction"]["txID"]
     
     
